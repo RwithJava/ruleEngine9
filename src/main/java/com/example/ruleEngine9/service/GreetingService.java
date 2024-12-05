@@ -20,8 +20,8 @@ public class GreetingService {
         greetingUnit.getInts().add(length);
 
         final RuleConfig ruleConfig = RuleUnitProvider.get().newRuleConfig();
-        ruleConfig.getAgendaEventListeners().add(new AuditingAgendaEventListener());
-        ruleConfig.getAgendaEventListeners().add(new ToStringAgendaEventListener());
+//        ruleConfig.getAgendaEventListeners().add(new AuditingAgendaEventListener());
+//        ruleConfig.getAgendaEventListeners().add(new ToStringAgendaEventListener());
         List<String> result = null;
         try {
             RuleUnitInstance<GreetingUnit> instance = RuleUnitProvider.get().createRuleUnitInstance(greetingUnit, ruleConfig);

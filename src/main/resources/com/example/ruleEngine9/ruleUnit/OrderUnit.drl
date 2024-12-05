@@ -1,0 +1,30 @@
+package com.example.ruleEngine9.ruleUnit;
+unit OrderUnit;
+
+rule isLoyal
+when
+    $orderRequest: /orderRequest[customerType.getValue == "LOYAL"]
+then
+    orderDiscount.setDiscount(orderDiscount.getDiscount() + 5);
+end
+
+rule "isNewOrDissatisfied"
+when
+   $orderRequest: /orderRequest[customerType.getValue != "LOYAL"]
+then
+    orderDiscount.setDiscount(orderDiscount.getDiscount() + 3);
+end
+
+rule "greaterThan_10000"
+when
+    $orderRequest: /orderRequest[amount == 10000]
+then
+    orderDiscount.setDiscount(orderDiscount.getDiscount() + 5);
+end
+
+rule basedOnAge
+when
+    $orderRequest: /orderRequest[age < 20 || age > 50]
+then
+    orderDiscount.setDiscount(orderDiscount.getDiscount() + 10);
+end
