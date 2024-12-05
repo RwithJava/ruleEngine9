@@ -2,14 +2,11 @@ package com.example.ruleEngine9.service;
 
 import com.example.ruleEngine9.model.OrderDiscount;
 import com.example.ruleEngine9.model.OrderRequest;
-import com.example.ruleEngine9.ruleUnit.GreetingUnit;
 import com.example.ruleEngine9.ruleUnit.OrderUnit;
 import org.drools.ruleunits.api.RuleUnitInstance;
 import org.drools.ruleunits.api.RuleUnitProvider;
 import org.drools.ruleunits.api.conf.RuleConfig;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class OrderService {
